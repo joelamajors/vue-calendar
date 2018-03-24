@@ -1,15 +1,14 @@
 <template>
-  <div id= "date-name-row" class="calendar">
+  <div id="date-name-row" class="calendar">
     <table>
       <thead>
         <tr>
-          <th class="date-names">S</th>
-          <th class="date-names">M</th>
-          <th class="date-names">T</th>
-          <th class="date-names">W</th>
-          <th class="date-names">T</th>
-          <th class="date-names">F</th>
-          <th class="date-names">S</th>
+          <th
+          v-for="dateName in dateNames"
+          :key="dateName.id"
+          class="date-names">
+            {{dateName.message}}
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -56,7 +55,20 @@
 
 <script>
 export default {
-  name: 'Calendar'
+  name: 'date-names',
+  data () {
+    return {
+      dateNames: [
+        { message: 'S' },
+        { message: 'M' },
+        { message: 'T' },
+        { message: 'W' },
+        { message: 'T' },
+        { message: 'F' },
+        { message: 'S' }
+      ]
+    }
+  }
 }
 </script>
 
