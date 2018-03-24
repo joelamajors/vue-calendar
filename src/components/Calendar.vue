@@ -13,40 +13,40 @@
       </thead>
       <tbody>
         <tr>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
         </tr>
         <tr>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
         </tr>
         <tr>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
         </tr>
         <tr>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
-          <td class="empty-days"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
+          <td class="days empty"></td>
         </tr>
       </tbody>
     </table>
@@ -73,20 +73,32 @@ export default {
 </script>
 
 <style scoped>
-.date-names {
-  border: 1px solid black;
-  color: black;
-  width: 2em;
-}
-.empty-days {
-  background-color: lightgrey;
-  border: 1px solid white;
-}
-.weekends {
-  background-color: yellow;
-  border: 1px solid white;
-}
-tr {
-  height: 2em;
-}
+  .date-names {
+    border: 1px solid black;
+    color: black;
+    width: 2em;
+    text-align: center;
+  }
+  .days {
+    border: 1px solid white;
+    text-align: center;
+  }
+  .empty {
+    background-color: lightgrey;
+    text-align: center;
+  }
+  .weekday {
+    background-color: yellowgreen;
+    text-align: center;
+  }
+  .weekend {
+    background-color: yellow;
+    text-align: center;
+  }
+  tr {
+    height: 2em;
+  }
+  #date-name-row {
+align-items: center;
+  }
 </style>
