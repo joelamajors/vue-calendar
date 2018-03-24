@@ -1,34 +1,80 @@
 <template>
-  <div class="calendar">
+  <div id= "date-name-row" class="calendar">
     <table>
-      <tr>
-        <td class="date-names">S</td>
-        <td class="date-names">M</td>
-        <td class="date-names">T</td>
-        <td class="date-names">W</td>
-        <td class="date-names">T</td>
-        <td class="date-names">F</td>
-        <td class="date-names">S</td>
-      </tr>
+      <thead>
+        <tr>
+          <th class="date-names">S</th>
+          <th class="date-names">M</th>
+          <th class="date-names">T</th>
+          <th class="date-names">W</th>
+          <th class="date-names">T</th>
+          <th class="date-names">F</th>
+          <th class="date-names">S</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+        </tr>
+        <tr>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+        </tr>
+        <tr>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+        </tr>
+        <tr>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+          <td class="empty-days"></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Calendar',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'Calendar'
 }
 </script>
 
 <style scoped>
 .date-names {
+  border: 1px solid black;
   color: black;
+  width: 2em;
+}
+.empty-days {
   background-color: lightgrey;
-  width: 30px;
+  border: 1px solid white;
+}
+.weekends {
+  background-color: yellow;
+  border: 1px solid white;
+}
+tr {
+  height: 2em;
 }
 </style>
