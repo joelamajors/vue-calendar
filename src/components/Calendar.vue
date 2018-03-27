@@ -1,55 +1,55 @@
 <template>
-  <div id="date-name-row" class="calendar">
-    <table>
-      <thead>
-        <tr>
-          <th
-          v-for="dateName in dateNames"
-          :key="dateName.id"
-          class="date-names">
-            {{dateName.message}}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-        </tr>
-        <tr>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-        </tr>
-        <tr>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-        </tr>
-        <tr>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-          <td class="days empty"></td>
-        </tr>
-      </tbody>
-    </table>
+  <div id="date-name" class="calendar-div">
+      <table class="calendar">
+        <thead>
+          <tr>
+            <th
+            v-for="dateName in dateNames"
+            :key="dateName.id"
+            class="date-names">
+              {{dateName.message}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+          </tr>
+          <tr>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+          </tr>
+          <tr>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+          </tr>
+          <tr>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+            <td class="days empty"></td>
+          </tr>
+        </tbody>
+      </table>
   </div>
 </template>
 
@@ -73,6 +73,10 @@ export default {
 </script>
 
 <style scoped>
+  table.calendar {
+    margin: 0 auto;
+  }
+
   .date-names {
     border: 1px solid black;
     color: black;
@@ -85,20 +89,15 @@ export default {
   }
   .empty {
     background-color: lightgrey;
-    text-align: center;
   }
   .weekday {
     background-color: yellowgreen;
-    text-align: center;
   }
   .weekend {
     background-color: yellow;
-    text-align: center;
   }
   tr {
     height: 2em;
   }
-  #date-name-row {
-align-items: center;
-  }
+
 </style>

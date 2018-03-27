@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <headerVue></headerVue>
+    <dateInput></dateInput>
+    <calendar></calendar>
   </div>
 </template>
 
 <script>
+import HeaderVue from './components/HeaderVue.vue'
+import Calendar from './components/Calendar.vue'
+import DateInput from './components/DateInput.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    HeaderVue,
+    Calendar,
+    DateInput
+  }
 }
 </script>
 

@@ -9,13 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Calendar',
-      component: Calendar
-    },
-    {
-      path: '/',
       name: 'DateInput',
       component: DateInput
+    },
+    {
+      path: '/Calendar',
+      name: 'Calendar',
+      component: Calendar
     }
   ]
 })
