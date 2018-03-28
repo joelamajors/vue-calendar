@@ -11,3 +11,19 @@ el: '#date-name-row',
     }
   }
 })
+
+
+name: 'date-names',
+  data () {
+    return {
+      dateNames: [
+        { message: 'S' },
+        { message: 'M' },
+        { message: 'T' },
+        { message: 'W' },
+        { message: 'T' },
+        { message: 'F' },
+        { message: 'S' }
+      ]
+    }
+  }

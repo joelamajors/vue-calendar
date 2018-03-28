@@ -1,71 +1,36 @@
 <template>
-  <div id="date-name" class="calendar-div">
-      <table class="calendar">
-        <thead>
-          <tr>
-            <th
-            v-for="dateName in dateNames"
-            :key="dateName.id"
-            class="date-names">
-              {{dateName.message}}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-          </tr>
-          <tr>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-          </tr>
-          <tr>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-          </tr>
-          <tr>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-            <td class="days empty"></td>
-          </tr>
-        </tbody>
-      </table>
+  <div id="day-nums" class="calendar">
+    <div class="dates-of-week">
+      <div
+        v-for="dateNum in dateNums"
+        :key="dateNum.id"
+        class="days inactive">
+          {{dateNum.dayOfMonth}}
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'date-names',
+  name: 'day-nums',
   data () {
     return {
-      dateNames: [
-        { message: 'S' },
-        { message: 'M' },
-        { message: 'T' },
-        { message: 'W' },
-        { message: 'T' },
-        { message: 'F' },
-        { message: 'S' }
+      dateNums: [
+        { dayOfMonth: 1 },
+        { dayOfMonth: 2 },
+        { dayOfMonth: 3 },
+        { dayOfMonth: 4 },
+        { dayOfMonth: 5 },
+        { dayOfMonth: 6 },
+        { dayOfMonth: 7 },
+        { dayOfMonth: 8 },
+        { dayOfMonth: 9 },
+        { dayOfMonth: 10 },
+        { dayOfMonth: 11 },
+        { dayOfMonth: 12 },
+        { dayOfMonth: 13 },
+        { dayOfMonth: 14 }
       ]
     }
   }
@@ -73,21 +38,20 @@ export default {
 </script>
 
 <style scoped>
-  table.calendar {
-    margin: 0 auto;
-  }
-
-  .date-names {
-    border: 1px solid black;
-    color: black;
-    width: 2em;
-    text-align: center;
+  .calendar {
+    margin-top: .25em;
+    text-align:center;
   }
   .days {
+    display: inline-block;
     border: 1px solid white;
+    min-width: 1em;
+    width: 14%;
     text-align: center;
+    padding: 0;
+    margin: 0;
   }
-  .empty {
+  .inactive {
     background-color: lightgrey;
   }
   .weekday {
@@ -96,8 +60,7 @@ export default {
   .weekend {
     background-color: yellow;
   }
-  tr {
-    height: 2em;
+  .dates-of-week {
+    text-align: center;
   }
-
 </style>
