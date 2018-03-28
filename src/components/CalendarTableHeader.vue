@@ -1,20 +1,20 @@
 <template>
-  <div id="date-name" class="calendar-header">
-    <div class="days-of-week">
-      <div
-        v-for="dateName in dateNames"
-        :key="dateName.id"
-        class="date-names"
+    <thead>
+      <tr>
+        <td
+          id="dateNames"
+          v-for="dateName in dateNames"
+          :key="dateName.id"
+          class="date-names-table"
         >
-        {{dateName.message}}
-      </div>
-    </div>
-  </div>
+          {{dateName.message}}
+        </td>
+      </tr>
+    </thead>
 </template>
 
 <script>
 export default {
-  name: 'date-names',
   data () {
     return {
       dateNames: [
@@ -32,15 +32,11 @@ export default {
 </script>
 
 <style scoped>
-  .date-names {
+  .date-names-table {
     display: inline-block;
     border: 1px solid black;
     color: black;
-    min-width: 1em;
-    width: 14%;
+    min-width: 2em;
     text-align: center;
-  }
-  .days-of-week {
-   text-align: center;
   }
 </style>

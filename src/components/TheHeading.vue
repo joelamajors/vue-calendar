@@ -1,6 +1,9 @@
 <template>
   <div>
-    <img class="headshot" src="../assets/headshot.png">
+    <img
+      class="headshot"
+      src="../assets/headshot.png"
+    >
     <h1>View Calendar by Joel</h1>
     <p>A partial calendar application built with Prosoft in mind.</p>
     <hr class="header-rule"/>
@@ -8,9 +11,7 @@
 </template>
 
 <script>
-export default {
-  name: 'HeaderVue'
-}
+export default {}
 </script>
 
 <style scoped>

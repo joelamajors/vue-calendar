@@ -1,23 +1,20 @@
 <template>
   <div id="app">
-    <headerVue></headerVue>
-    <dateInput></dateInput>
-    <calendarHeader></calendarHeader>
-    <calendar></calendar>
+    <theHeading />
+    <dateInput />
+    <calendar />
   </div>
 </template>
 
 <script>
-import HeaderVue from './components/HeaderVue.vue'
-import CalendarHeader from './components/CalendarHeader.vue'
-import Calendar from './components/Calendar.vue'
+import TheHeading from './components/TheHeading.vue'
 import DateInput from './components/DateInput.vue'
+import Calendar from './components/Calendar.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderVue,
-    CalendarHeader,
+    TheHeading,
     Calendar,
     DateInput
   }
