@@ -5,8 +5,7 @@
         <input
           id="date-selection"
           type="date"
-          :value="chosenDate && chosenDate.toISOString().split('T')[0]"
-          @input="chosenDate = $event.target.valueAsDate"
+          v-model="chosenDate"
           class="date-inputs"
         />
       Number of Days:
@@ -31,16 +30,11 @@
 export default {
   data () {
     return {
-      chosenDate: new Date(),
+      chosenDate: new Date().toISOString().split('T')[0],
       numberOfDays: 0,
       countryCode: 'US'
     }
   }
-  // methods: {
-  //   setDate() {
-  //     this.chosenDate = new chosenDate.setDate();
-  //   }
-  // }
 }
 </script>
 
