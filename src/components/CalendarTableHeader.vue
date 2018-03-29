@@ -18,13 +18,13 @@ export default {
   data () {
     return {
       dateNames: [
-        { message: 'S' },
-        { message: 'M' },
-        { message: 'T' },
-        { message: 'W' },
-        { message: 'T' },
-        { message: 'F' },
-        { message: 'S' }
+        { id: 0, message: 'S' },
+        { id: 1, message: 'M' },
+        { id: 2, message: 'T' },
+        { id: 3, message: 'W' },
+        { id: 4, message: 'T' },
+        { id: 5, message: 'F' },
+        { id: 6, message: 'S' }
       ]
     }
   }

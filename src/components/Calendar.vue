@@ -2,19 +2,19 @@
   <div id="day-nums" class="calendar">
      <table class="calendar">
        <calendarTableHeader />
-       <calendarTableRows />
+       <calendarTableDays />
      </table>
   </div>
 </template>
 
 <script>
 import CalendarTableHeader from './CalendarTableHeader.vue'
-import CalendarTableRows from './CalendarTableRows.vue'
+import CalendarTableDays from './CalendarTableDays.vue'
 
 export default {
   components: {
     CalendarTableHeader,
-    CalendarTableRows
+    CalendarTableDays
   }
 }
 </script>
@@ -23,5 +23,6 @@ export default {
   .calendar {
     margin: 0 auto;
     text-align:center;
+    empty-cells: show;
   }
 </style>

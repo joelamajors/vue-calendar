@@ -1,16 +1,46 @@
 <template>
   <div id="dateinput">
     <form>
-      Date: <input id="date-selection" type="date" class="date-inputs"/>
-      Number of Days: <input id="number-days" type="number" class="date-inputs"/>
-      Country Code: <input id="country-code" type="text" class="date-inputs"/>
+      Date:
+        <input
+          id="date-selection"
+          type="date"
+          :value="chosenDate && chosenDate.toISOString().split('T')[0]"
+          @input="chosenDate = $event.target.valueAsDate"
+          class="date-inputs"
+        />
+      Number of Days:
+        <input
+          id="number-days"
+          type="number"
+          v-model="numberOfDays"
+          class="date-inputs"
+        />
+      Country Code:
+        <input
+          id="country-code"
+          type="text"
+          v-model="countryCode"
+          class="date-inputs"
+        />
     </form>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DateInput'
+  data () {
+    return {
+      chosenDate: new Date(),
+      numberOfDays: 0,
+      countryCode: 'US'
+    }
+  }
+  // methods: {
+  //   setDate() {
+  //     this.chosenDate = new chosenDate.setDate();
+  //   }
+  // }
 }
 </script>
 
