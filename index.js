@@ -7,9 +7,6 @@ new Vue({
     monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   },
   computed: {
-    weekdayNames: function (){
-      return _dayNames.map((_dayNames) => _dayNames[0])
-    },
     selectedDate: function (){
       return new Date(this.selectedDay);
     },
