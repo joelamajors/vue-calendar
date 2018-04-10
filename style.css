@@ -7,57 +7,35 @@ body {
   margin-top: 60px;
 }
 
-.calendar {
-  empty-cells: show;
-  margin: 0 auto;
-  text-align:center;
-}
-
-.date-inputs {
-  margin-right: .5em;
-}
-
-#dateinput {
-  margin-bottom: 2em;
-}
-
 .days {
   background-color: lightgrey;
   border: 1px solid white;
   display: inline-block;
   margin: 0;
-  width: 30px;
+  width:calc(100% / 7);
   padding: 0;
-  text-align: center;
+  box-sizing: border-box;
+  float: left;
 }
 
-.inactive {
-  color: lightgrey;
+.active {
+  background-color: darkseagreen;
 }
 
-.weekday {
-  background-color: yellowgreen;
+.active:nth-child(7n),
+.active:nth-child(7n - 6) {
+  background: yellow;
 }
 
-.weekend {
-  background-color: yellow;
-}
-
-.dates-of-week {
-  text-align: center;
-}
-
-.date-names-table {
-  border: 1px solid black;
-  color: black;
+.calendar {
   display: inline-block;
-  margin-right: -.5px;
-  min-width: 2em;
-  text-align: center;
+  width: 225px;
 }
 
-.month {
-  max-width: 225px;
-  display: inline-block;
-  
+.dayname {
+  background-color: white;
+}
+
+.month-title {
+  background-color: #a6bc8f;
 }

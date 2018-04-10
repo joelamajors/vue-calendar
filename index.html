@@ -9,63 +9,64 @@
   <body>
     <div id="hello-app">
       <h1>{{ message }}</h1>
-      <button v-on:click="newMessage">The Truth</button>
     </div>
-    <div id=calendar-app>
+
+    <div id="calendar-app">
       <form >
         <p>Date:
           <input 
-            type="date"
+            type="text"
             v-model="selectedDay"
-            class="date-inputs"
-          />
+            placeholder="mm/dd/yyyy"
+            />
         </p>
         <p>Number of Days:
           <input 
             type="number"
             v-model="selectedLength"
-            class="date-inputs"
-          />
+            />
         </p>
         <p>Country Code:
           <input 
             type="text"
             v-model="countryCode"
-            class="date-inputs"
-          />
+            />
         </p>
       </form>
-      <div>
-        <p>Selected Date Output: {{ selectedDay }} </p>
-        <p>Day of Week is: {{ dateDayOfWeek }} </p>
-        <p>Country Code: {{ countryCode }}</p>
-      </div>
-      <div>
-        <h2>{{ dateMonth }}</h2>
-        <div class="month">
-          <div 
-            v-for="name in weekdayNames"
-            class="days dates-of-week" 
-            >
-            {{ name }}
-          </div>
-        
-          <div 
-            v-for="day in dayRange"
-            class="days" 
-            >
-              {{ day.getUTCDate() }}
-<!-- TODO -->
-<!-- add days before selected date  -->
-<!-- add colors for weekend/weekday (dependent upon getUTCday no?)  -->
-<!-- add end of month recognizing codey-ma-jig -->
-<!-- add function for creating new month -->
+      <div class="calendar">
+        <div 
+          v-for="name in weekdayNames"
+          class="days dayname" 
+          >
+          {{ name }}
+        </div>
+        <div v-for="month in makeMonth">
+          <div class="month-title">{{ month.title }} {{ month.year }}</div>
+          <div class="month">
+            <div 
+              v-for="day in month.lead" 
+              class="days"
+              >
+              &nbsp;
+            </div>
+            <div 
+              v-for="day in month.days"
+              v-text="day + month.start - 1"
+              class="days active"
+              >
+            </div>
+            <div 
+              v-for="day in month.tail"
+              class="days tail"
+              >
+              &nbsp;
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-  <!-- <script src="vue.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="index.js"></script>
   </body>
