@@ -3,10 +3,71 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>prosoft-vue-calendar</title>
+    <title>Prosoft Vue Calendar</title>
+    <link rel="stylesheet" href="style.css" >
   </head>
   <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="hello-app">
+      <h1>{{ message }}</h1>
+      <button v-on:click="newMessage">The Truth</button>
+    </div>
+    <div id=calendar-app>
+      <form >
+        <p>Date:
+          <input 
+            type="date"
+            v-model="selectedDay"
+            class="date-inputs"
+          />
+        </p>
+        <p>Number of Days:
+          <input 
+            type="number"
+            v-model="selectedLength"
+            class="date-inputs"
+          />
+        </p>
+        <p>Country Code:
+          <input 
+            type="text"
+            v-model="countryCode"
+            class="date-inputs"
+          />
+        </p>
+      </form>
+      <div>
+        <p>Selected Date Output: {{ selectedDay }} </p>
+        <p>Day of Week is: {{ dateDayOfWeek }} </p>
+        <p>Country Code: {{ countryCode }}</p>
+      </div>
+      <div>
+        <h2>{{ dateMonth }}</h2>
+        <div class="month">
+          <div 
+            v-for="name in weekdayNames"
+            class="days dates-of-week" 
+            >
+            {{ name }}
+          </div>
+        
+          <div 
+            v-for="day in dayRange"
+            class="days" 
+            >
+              {{ day.getUTCDate() }}
+<!-- TODO -->
+<!-- add days before selected date  -->
+<!-- add colors for weekend/weekday (dependent upon getUTCday no?)  -->
+<!-- add end of month recognizing codey-ma-jig -->
+<!-- add function for creating new month -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- <script src="vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="index.js"></script>
   </body>
+
 </html>
