@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="hello-app">
-      <h1>{{ message }}</h1>
+      <h1>Prosoft Code Challenge</h1>
     </div>
 
     <div id="calendar-app">
@@ -27,18 +27,21 @@
             />
         </p>
         <p>Country Code:
-          <input 
+          <input
             type="text"
             v-model="countryCode"
             />
         </p>
       </form>
       <div class="calendar">
-        <div 
-          v-for="name in weekdayNames"
-          class="days dayname" 
-          >
-          {{ name }}
+        <div>
+          <div class="days dayname">S</div>
+          <div class="days dayname">M</div>
+          <div class="days dayname">T</div>
+          <div class="days dayname">W</div>
+          <div class="days dayname">T</div>
+          <div class="days dayname">F</div>
+          <div class="days dayname">S</div>
         </div>
         <div v-for="month in makeMonth">
           <div class="month-title">{{ month.title }} {{ month.year }}</div>

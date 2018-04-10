@@ -1,19 +1,10 @@
 new Vue({
-  el: '#hello-app',
-  data: {
-    message: 'Prosoft Code Challenge'
-  }
-});
-
-const _dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const _monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-new Vue({
   el: '#calendar-app',
   data: {
     selectedDay: "09/23/2006",
     selectedLength: 30,
-    countryCode: "US"
+    countryCode: "US",
+    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   },
   computed: {
     weekdayNames: function (){
@@ -51,7 +42,7 @@ new Vue({
         var nextDay = new Date(this.selectedDate),
             currentDay = nextDay.setDate(nextDay.getDate() + daysUsed),
             monthNum = new Date(currentDay).getMonth() + 1,
-            monthName = _monthNames[monthNum - 1],
+            monthName = this.monthNames[monthNum - 1],
             currentYear = new Date(currentDay).getFullYear(),
             first = i == 0 ? this.firstDay : 1,
             totalDays = new Date(this.firstYear, monthNum, 0).getDate() - (first - 1),
